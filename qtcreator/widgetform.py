@@ -34,6 +34,7 @@ class StandardForm(QObject):
 
         if object_name:
             self.setObjectName(object_name)
+
         if callable(self.__animationCallback):
             self.__animation = QVariantAnimation(self)
             self.__animation.valueChanged.connect(self.__animation_value_changed)

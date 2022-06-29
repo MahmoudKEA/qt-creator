@@ -20,7 +20,7 @@ QListWidget
 }
 QListWidget[hasContent="true"]
 {
-	background-image: url('images/background.jpg');
+	background-image: url('styles/background.jpg');
 }
 
 
@@ -69,7 +69,7 @@ QComboBox::on
 }
 QComboBox::drop-down
 {
-    image: url('images/arrow-down.png');
+    image: url('styles/arrow-down.png');
     margin-top: 15px;
     margin-right: 8px;
 }
