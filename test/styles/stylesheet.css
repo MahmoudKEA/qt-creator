@@ -1,0 +1,218 @@
+QWidget
+{
+	color: black;
+	outline: 0px;
+    /*border: 1px solid red;*/
+}
+
+
+QPushButton,
+QLabel,
+QuickMenu
+{
+	background: transparent;
+}
+
+
+QListWidget
+{
+	border: 0px;
+}
+QListWidget[hasContent="true"]
+{
+	background-image: url('images/background.jpg');
+}
+
+
+QuickNotifyListWidgetItem,
+QuickNotifyListWidgetItem QLabel,
+QuickMenu #mainWidget
+{
+	color: white;
+	background-color: black;
+	border-radius: 10px;
+}
+QuickMenu QPushButton
+{
+	color: white;
+	border-radius: 10px;
+	text-align: left;
+	padding: 10px;
+}
+QuickMenu QPushButton:hover
+{
+	background-color: rgba(255, 255, 255, 30);
+}
+
+
+QLineEdit
+{
+	border-radius: 5px;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+
+QComboBox
+{
+	color: white;
+    background-color: black;
+    selection-background-color: gray;
+    border-radius: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+QComboBox::on
+{
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+}
+QComboBox::drop-down
+{
+    image: url('images/arrow-down.png');
+    margin-top: 15px;
+    margin-right: 8px;
+}
+QComboBox::drop-down:disabled
+{
+    image: none;
+}
+QComboBox QAbstractItemView
+{
+    background-color: black;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    padding-left: 10px;
+    padding-right: 5px;
+    padding-bottom: 10px;
+}
+QComboBox QAbstractItemView::item
+{
+    color: white;
+    min-height: 41px;
+}
+QComboBox QListView::item:hover,
+QComboBox QListView::item:selected
+{
+    color: white;
+    background-color: rgba(255, 255, 255, 30);
+    border-radius: 5px;
+    padding: 10px;
+}
+QComboBox QScrollBar::handle
+{
+    background-color: rgba(255, 255, 255, 100);
+}
+
+
+HeaderWidget #labelUsername,
+HeaderWidget #labelStatus
+{
+	color: white;
+}
+HeaderWidget #pushButtonSettings
+{
+	border-radius: 15px;
+	background-color: #fec202;
+}
+
+
+SettingsDialog #mainWidget
+{
+	border-radius: 10px;
+	border-bottom-right-radius: 0px;
+}
+SettingsDialog QLineEdit
+{
+	background-color: #f1f1f1;
+}
+SettingsDialog #pushButtonClose
+{
+	background-color: black;
+	border-radius: 12px;
+}
+
+
+QProgressBar
+{
+	background-color: #f1f1f1;
+	border-radius: 4px
+}
+QProgressBar::chunk
+{
+	background-color: #fec202;
+	border-radius: 4px
+}
+
+
+QuickLineEditMultiple
+{
+	background-color: #f1f1f1;
+	border-radius: 10px;
+}
+QuickLineEditMultiple QLineEdit
+{
+	border-radius: 0px;
+	border-bottom: 1px solid gray;
+	padding: 0px;
+}
+QuickLineEditMultiple QLineEdit:focus
+{
+	border-width: 3px;
+}
+
+
+QuickToolTip QLabel
+{
+    color: white;
+}
+QuickToolTip #mainWidget
+{
+    background-color: #fec202;
+    border-radius: 5px;
+}
+
+
+MessageWidget QuickToolTip QLabel
+{
+    color: white;
+}
+MessageWidget QuickToolTip #mainWidget
+{
+    border-radius: 5px;
+}
+
+
+ChatWidget #pushButtonHistory
+{
+	background-color: #fec202;
+	border-radius: 5px;
+}
+
+
+SendBarWidget QLineEdit
+{
+	background-color: white;
+}
+
+
+QuickMessageBox QPushButton
+{
+	color: white;
+	background-color: black;
+	border-radius: 5px
+}
+QuickMessageBox #mainWidget
+{
+	border-radius: 10px;
+}
+QuickMessageBox #pushButtonClose
+{
+	border-radius: 12px;
+}
+
+
+#mainWidget
+{
+    background-color: white;
+}
