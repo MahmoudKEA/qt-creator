@@ -1,3 +1,9 @@
+"""
+This library is designed to build Qt6 applications more easily, quickly and flexibly
+it provides more professional tools as well
+Designed by: Mahmoud Khalid
+"""
+
 from PyQt6.QtWidgets import *
 from PyQt6.QtGui import *
 from PyQt6.QtCore import *
