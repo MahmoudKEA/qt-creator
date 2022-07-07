@@ -1,7 +1,4 @@
-from PyQt6.QtWidgets import *
-from PyQt6.QtGui import *
-from PyQt6.QtCore import *
-from typing import Any, Callable
+from .header import *
 from .widgetform import StandardForm
 
 
@@ -16,9 +13,9 @@ class QuickWidget(QWidget, StandardForm):
             fixed_width: int = None,
             fixed_height: int = None,
             object_name: str = None,
-            animation_value_changed: Callable = None,
-            animation_start_value: Any = None,
-            animation_end_value: Any = None,
+            animation_value_changed: typing.Callable = None,
+            animation_start_value: typing.Any = None,
+            animation_end_value: typing.Any = None,
             animation_duration: int = 300
     ):
         super(QuickWidget, self).__init__(

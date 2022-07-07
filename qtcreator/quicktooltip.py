@@ -1,14 +1,11 @@
-from PyQt6.QtWidgets import *
-from PyQt6.QtGui import *
-from PyQt6.QtCore import *
-from typing import Union
+from .header import *
 from .quickmainwidget import QuickMainWidget
 
 
 class QuickToolTip(QuickMainWidget):
     def __init__(
             self, parent=None,
-            margin: Union[int, list] = 11,
+            margin: typing.Union[int, list] = 11,
             shadow: QGraphicsDropShadowEffect = None,
             color: QColor = None,
             align: Qt.AlignmentFlag = Qt.AlignmentFlag.AlignTop,
@@ -221,7 +218,7 @@ class QuickToolTipMessage(QuickToolTip):
             close_icon: QIcon = None,
             close_icon_size: QSize = QSize(16, 16),
             close_size: QSize = QSize(21, 21),
-            margin: Union[int, list] = 11,
+            margin: typing.Union[int, list] = 11,
             shadow: QGraphicsDropShadowEffect = None,
             color: QColor = None,
             align: Qt.AlignmentFlag = Qt.AlignmentFlag.AlignTop,

@@ -1,7 +1,4 @@
-from PyQt6.QtWidgets import *
-from PyQt6.QtGui import *
-from PyQt6.QtCore import *
-from typing import Any, Union
+from .header import *
 from .quickdialog import QuickDialog
 from .quickwidget import QuickWidget
 from .quicklabel import QuickLabel
@@ -36,7 +33,7 @@ class QuickMessageBox(QuickDialog):
             cancel_button: str = None,
             inputs: list = None,
             resizable: bool = False,
-            margin: Union[int, list] = 11,
+            margin: typing.Union[int, list] = 11,
             spacing: int = 11,
             shadow: QGraphicsDropShadowEffect = None,
             focus_policy: Qt.FocusPolicy = Qt.FocusPolicy.ClickFocus,
@@ -169,11 +166,11 @@ class QuickMessageBox(QuickDialog):
             y = int(event.globalPosition().y() - self.__clickPressedY)
             self.move(x, y)
 
-    def add_input(self, widget: Any):
+    def add_input(self, widget: typing.Any):
         self.inputWidget.layout().addWidget(widget)
         widget.show()
 
-    def replace_input(self, current_widget: Any, new_widget: Any, delete: bool = False):
+    def replace_input(self, current_widget: typing.Any, new_widget: typing.Any, delete: bool = False):
         self.inputWidget.layout().replaceWidget(current_widget, new_widget)
         new_widget.show()
         if delete:
@@ -181,7 +178,7 @@ class QuickMessageBox(QuickDialog):
         else:
             current_widget.hide()
 
-    def remove_input(self, widget: Any, delete: bool = False):
+    def remove_input(self, widget: typing.Any, delete: bool = False):
         self.inputWidget.layout().removeWidget(widget)
         if delete:
             widget.deleteLater()

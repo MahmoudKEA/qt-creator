@@ -2,6 +2,7 @@ from PyQt6.QtWidgets import *
 from PyQt6.QtGui import *
 from PyQt6.QtCore import *
 from password_strength import PasswordStats
+from . import header
 from . import utility
 from . import animation
 from .quickshadow import QuickShadow
@@ -26,4 +27,5 @@ from .quicknotify import QuickNotifyListWidgetItem, QuickNotifyMessageListWidget
 import sys
 import io
 import math
+import typing
 import pyqrcode

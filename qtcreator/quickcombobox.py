@@ -1,7 +1,4 @@
-from PyQt6.QtWidgets import *
-from PyQt6.QtGui import *
-from PyQt6.QtCore import *
-from typing import Any, Callable, Union
+from .header import *
 from .widgetform import AbstractForm
 from .quicktooltip import QuickToolTip, QuickToolTipMessage
 from . import utility
@@ -27,11 +24,11 @@ class QuickComboBox(QComboBox, AbstractForm):
             fixed_width: int = None,
             fixed_height: int = None,
             object_name: str = None,
-            animation_value_changed: Callable = None,
-            animation_start_value: Any = None,
-            animation_end_value: Any = None,
+            animation_value_changed: typing.Callable = None,
+            animation_start_value: typing.Any = None,
+            animation_end_value: typing.Any = None,
             animation_duration: int = 300,
-            tooltip: Union[QuickToolTip, QuickToolTipMessage] = None
+            tooltip: typing.Union[QuickToolTip, QuickToolTipMessage] = None
     ):
         super(QuickComboBox, self).__init__(
             parent, font_size=font_size, icon_size=icon_size, cursor=cursor, focus_policy=focus_policy,

@@ -1,7 +1,4 @@
-from PyQt6.QtWidgets import *
-from PyQt6.QtGui import *
-from PyQt6.QtCore import *
-from typing import Any, Callable, Union
+from .header import *
 from .widgetform import AbstractForm
 from .quicktooltip import QuickToolTip, QuickToolTipMessage
 from .quickwidget import QuickWidget
@@ -24,11 +21,11 @@ class QuickLabel(QLabel, AbstractForm):
             fixed_width: int = None,
             fixed_height: int = None,
             object_name: str = None,
-            animation_value_changed: Callable = None,
-            animation_start_value: Any = None,
-            animation_end_value: Any = None,
+            animation_value_changed: typing.Callable = None,
+            animation_start_value: typing.Any = None,
+            animation_end_value: typing.Any = None,
             animation_duration: int = 300,
-            tooltip: Union[QuickToolTip, QuickToolTipMessage] = None
+            tooltip: typing.Union[QuickToolTip, QuickToolTipMessage] = None
     ):
         super(QuickLabel, self).__init__(
             parent, text=text, font_size=font_size, fixed_size=fixed_size, fixed_width=fixed_width,
@@ -88,11 +85,11 @@ class QuickLabelAddress(QuickWidget):
             explorer_url: str = None,
             add_copy: bool = True,
             copy_icon: QIcon = None,
-            copy_tooltip: Union[QuickToolTip, QuickToolTipMessage] = None,
+            copy_tooltip: typing.Union[QuickToolTip, QuickToolTipMessage] = None,
             add_browse: bool = False,
             browse_icon: QIcon = None,
-            browse_tooltip: Union[QuickToolTip, QuickToolTipMessage] = None,
-            margin: Union[int, list] = 0,
+            browse_tooltip: typing.Union[QuickToolTip, QuickToolTipMessage] = None,
+            margin: typing.Union[int, list] = 0,
             spacing: int = 11,
             selectable: bool = False,
             word_warp: bool = False,
@@ -101,11 +98,11 @@ class QuickLabelAddress(QuickWidget):
             fixed_width: int = None,
             fixed_height: int = None,
             object_name: str = None,
-            animation_value_changed: Callable = None,
-            animation_start_value: Any = None,
-            animation_end_value: Any = None,
+            animation_value_changed: typing.Callable = None,
+            animation_start_value: typing.Any = None,
+            animation_end_value: typing.Any = None,
             animation_duration: int = 300,
-            tooltip: Union[QuickToolTip, QuickToolTipMessage] = None
+            tooltip: typing.Union[QuickToolTip, QuickToolTipMessage] = None
     ):
         super(QuickLabelAddress, self).__init__(
             parent, object_name=object_name, animation_value_changed=animation_value_changed,

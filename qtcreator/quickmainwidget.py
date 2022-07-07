@@ -1,6 +1,4 @@
-from PyQt6.QtWidgets import *
-from PyQt6.QtCore import *
-from typing import Union
+from .header import *
 from .quickshadow import QuickShadow
 from .quickwidget import QuickWidget
 
@@ -11,7 +9,7 @@ class QuickMainWidget(QuickWidget):
             flags: Qt.WindowType = Qt.WindowType.FramelessWindowHint,
             attribute: Qt.WidgetAttribute = Qt.WidgetAttribute.WA_TranslucentBackground,
             resizable: bool = True,
-            margin: Union[int, list] = 11,
+            margin: typing.Union[int, list] = 11,
             shadow: QGraphicsDropShadowEffect = QuickShadow(),
             focus_policy: Qt.FocusPolicy = Qt.FocusPolicy.ClickFocus,
             fixed_size: QSize = None,

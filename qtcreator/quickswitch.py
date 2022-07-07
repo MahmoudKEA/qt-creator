@@ -1,7 +1,4 @@
-from PyQt6.QtWidgets import *
-from PyQt6.QtGui import *
-from PyQt6.QtCore import *
-from typing import Union
+from .header import *
 from .quicktooltip import QuickToolTip, QuickToolTipMessage
 
 
@@ -138,7 +135,7 @@ class QuickSwitch(QSwitch):
             focus_policy: Qt.FocusPolicy = Qt.FocusPolicy.NoFocus,
             cursor: Qt.CursorShape = Qt.CursorShape.PointingHandCursor,
             object_name: str = None,
-            tooltip: Union[QuickToolTip, QuickToolTipMessage] = None
+            tooltip: typing.Union[QuickToolTip, QuickToolTipMessage] = None
     ):
         super(QuickSwitch, self).__init__(
             parent, track_radius=track_radius, thumb_radius=thumb_radius

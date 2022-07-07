@@ -3,11 +3,7 @@ Forked from:
 https://github.com/fbjorn/QtWaitingSpinner
 """
 
-from PyQt6.QtCore import *
-from PyQt6.QtGui import *
-from PyQt6.QtWidgets import *
-from typing import Union
-import math
+from .header import *
 
 
 class QuickSpinner(QWidget):
@@ -16,13 +12,13 @@ class QuickSpinner(QWidget):
             center_on_parent: bool = True,
             disable_parent_when_spinning: bool = False,
             modality: Qt.WindowModality = Qt.WindowModality.NonModal,
-            roundness: Union[int, float] = 100,
-            fade: Union[int, float] = 50,
+            roundness: typing.Union[int, float] = 100,
+            fade: typing.Union[int, float] = 50,
             lines: int = 12,
             line_length: int = 10,
             line_width: int = 2,
             radius: int = 10,
-            speed: Union[int, float] = math.pi / 2,
+            speed: typing.Union[int, float] = math.pi / 2,
             color: QColor = QColor(Qt.GlobalColor.black)
     ):
         super().__init__(parent)
@@ -131,19 +127,19 @@ class QuickSpinner(QWidget):
         return self.__color
 
     @property
-    def roundness(self) -> Union[int, float]:
+    def roundness(self) -> typing.Union[int, float]:
         return self.__roundness
 
     @property
-    def minimum_trail_opacity(self) -> Union[int, float]:
+    def minimum_trail_opacity(self) -> typing.Union[int, float]:
         return self.__minimumTrailOpacity
 
     @property
-    def trail_fade_percentage(self) -> Union[int, float]:
+    def trail_fade_percentage(self) -> typing.Union[int, float]:
         return self.__trailFadePercentage
 
     @property
-    def revolutions_pers_second(self) -> Union[int, float]:
+    def revolutions_pers_second(self) -> typing.Union[int, float]:
         return self.__revolutionsPerSecond
 
     @property
@@ -166,20 +162,20 @@ class QuickSpinner(QWidget):
     def is_spinning(self) -> bool:
         return self.__isSpinning
 
-    def set_roundness(self, roundness: Union[int, float]):
+    def set_roundness(self, roundness: typing.Union[int, float]):
         self.__roundness = max(0.0, min(100.0, roundness))
 
     def set_color(self, color: QColor = QColor(Qt.GlobalColor.black)):
         self.__color = color
 
-    def set_revolutions_per_second(self, revolutions_per_second: Union[int, float]):
+    def set_revolutions_per_second(self, revolutions_per_second: typing.Union[int, float]):
         self.__revolutionsPerSecond = revolutions_per_second
         self.update_timer()
 
-    def set_trail_fade_percentage(self, trail: Union[int, float]):
+    def set_trail_fade_percentage(self, trail: typing.Union[int, float]):
         self.__trailFadePercentage = trail
 
-    def set_minimum_trail_opacity(self, minimum_trail_opacity: Union[int, float]):
+    def set_minimum_trail_opacity(self, minimum_trail_opacity: typing.Union[int, float]):
         self.__minimumTrailOpacity = minimum_trail_opacity
 
     def rotate(self):
@@ -213,7 +209,8 @@ class QuickSpinner(QWidget):
     @staticmethod
     def current_line_color(
             count_distance: int, total_number_of_lines: int,
-            trail_fade_percentage: Union[int, float], min_opacity: Union[int, float], color_input: QColor
+            trail_fade_percentage: typing.Union[int, float],
+            min_opacity: typing.Union[int, float], color_input: QColor
     ) -> QColor:
         color = QColor(color_input)
         if count_distance == 0:

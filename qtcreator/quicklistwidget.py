@@ -1,7 +1,4 @@
-from PyQt6.QtWidgets import *
-from PyQt6.QtGui import *
-from PyQt6.QtCore import *
-from typing import Any, Callable, Union
+from .header import *
 from .widgetform import StandardForm
 from .quicktooltip import QuickToolTip, QuickToolTipMessage
 from .quickwidget import QuickWidget
@@ -16,7 +13,7 @@ class EmptyListWidget(QuickWidget):
             illustration: QPixmap = None,
             title: str = None,
             description: str = None,
-            margin: Union[int, list] = 11,
+            margin: typing.Union[int, list] = 11,
             spacing: int = 11,
             fixed_size: QSize = None,
             fixed_width: int = None,
@@ -67,11 +64,11 @@ class QuickListWidgetItem(QuickWidget):
             fixed_width: int = None,
             fixed_height: int = None,
             object_name: str = None,
-            animation_value_changed: Callable = None,
-            animation_start_value: Any = None,
-            animation_end_value: Any = None,
+            animation_value_changed: typing.Callable = None,
+            animation_start_value: typing.Any = None,
+            animation_end_value: typing.Any = None,
             animation_duration: int = 300,
-            tooltip: Union[QuickToolTip, QuickToolTipMessage] = None
+            tooltip: typing.Union[QuickToolTip, QuickToolTipMessage] = None
     ):
         super(QuickListWidgetItem, self).__init__(
             parent, graphic_effect=graphic_effect, fixed_size=fixed_size, fixed_width=fixed_width,
@@ -124,9 +121,9 @@ class QuickListWidget(QListWidget, StandardForm):
             fixed_width: int = None,
             fixed_height: int = None,
             object_name: str = None,
-            animation_value_changed: Callable = None,
-            animation_start_value: Any = None,
-            animation_end_value: Any = None,
+            animation_value_changed: typing.Callable = None,
+            animation_start_value: typing.Any = None,
+            animation_end_value: typing.Any = None,
             animation_duration: int = 300
     ):
         super(QuickListWidget, self).__init__(

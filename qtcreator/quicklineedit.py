@@ -1,8 +1,4 @@
-from PyQt6.QtWidgets import *
-from PyQt6.QtGui import *
-from PyQt6.QtCore import *
-from typing import Any, Callable, Union
-from password_strength import PasswordStats
+from .header import *
 from .widgetform import AbstractForm
 from .quickwidget import QuickWidget
 from .quicktooltip import QuickToolTip, QuickToolTipMessage
@@ -35,11 +31,11 @@ class QuickLineEdit(QLineEdit, AbstractForm):
             fixed_width: int = None,
             fixed_height: int = None,
             object_name: str = None,
-            animation_value_changed: Callable = None,
-            animation_start_value: Any = None,
-            animation_end_value: Any = None,
+            animation_value_changed: typing.Callable = None,
+            animation_start_value: typing.Any = None,
+            animation_end_value: typing.Any = None,
             animation_duration: int = 300,
-            tooltip: Union[QuickToolTip, QuickToolTipMessage] = None
+            tooltip: typing.Union[QuickToolTip, QuickToolTipMessage] = None
     ):
         super(QuickLineEdit, self).__init__(
             parent, text=text, font_size=font_size, focus_policy=focus_policy, fixed_size=fixed_size,
@@ -101,26 +97,26 @@ class QuickLineEditMultiple(QuickWidget):
             numeric: bool = True,
             mode: QLineEdit.EchoMode = None,
             menu_policy: Qt.ContextMenuPolicy = None,
-            margin: Union[int, list] = 0,
+            margin: typing.Union[int, list] = 0,
             spacing: int = 11,
             add_eye: bool = False,
             eye_one_click: bool = True,
             eye_show_icon: QIcon = None,
             eye_hidden_icon: QIcon = None,
             eye_icon_size: QSize = QSize(21, 21),
-            eye_tooltip: Union[QuickToolTip, QuickToolTipMessage] = None,
+            eye_tooltip: typing.Union[QuickToolTip, QuickToolTipMessage] = None,
             font_size: int = None,
             focus_policy: Qt.FocusPolicy = Qt.FocusPolicy.StrongFocus,
             fixed_size: QSize = None,
             fixed_width: int = None,
             fixed_height: int = None,
             object_name: str = None,
-            animation_value_changed: Callable = None,
-            animation_start_value: Any = None,
-            animation_end_value: Any = None,
+            animation_value_changed: typing.Callable = None,
+            animation_start_value: typing.Any = None,
+            animation_end_value: typing.Any = None,
             animation_duration: int = 300,
-            tooltip: Union[QuickToolTip, QuickToolTipMessage] = None,
-            text_changed: Callable = None
+            tooltip: typing.Union[QuickToolTip, QuickToolTipMessage] = None,
+            text_changed: typing.Callable = None
     ):
         super(QuickLineEditMultiple, self).__init__(
             parent, object_name=object_name, animation_value_changed=animation_value_changed,
@@ -243,7 +239,7 @@ class QuickLineEditPassword(QuickWidget):
             numeric: bool = False,
             length: int = 64,
             menu_policy: Qt.ContextMenuPolicy = None,
-            margin: Union[int, list] = 0,
+            margin: typing.Union[int, list] = 0,
             spacing: int = 11,
             clearable: bool = False,
             add_icon: bool = False,
@@ -256,7 +252,7 @@ class QuickLineEditPassword(QuickWidget):
             eye_show_icon: QIcon = None,
             eye_hidden_icon: QIcon = None,
             eye_icon_size: QSize = QSize(21, 21),
-            eye_tooltip: Union[QuickToolTip, QuickToolTipMessage] = None,
+            eye_tooltip: typing.Union[QuickToolTip, QuickToolTipMessage] = None,
             add_strength_bar: bool = True,
             strength_bar_text_visible: bool = True,
             strength_bar_text_align: Qt.AlignmentFlag = None,
@@ -267,11 +263,11 @@ class QuickLineEditPassword(QuickWidget):
             fixed_width: int = None,
             fixed_height: int = None,
             object_name: str = None,
-            animation_value_changed: Callable = None,
-            animation_start_value: Any = None,
-            animation_end_value: Any = None,
+            animation_value_changed: typing.Callable = None,
+            animation_start_value: typing.Any = None,
+            animation_end_value: typing.Any = None,
             animation_duration: int = 300,
-            tooltip: Union[QuickToolTip, QuickToolTipMessage] = None
+            tooltip: typing.Union[QuickToolTip, QuickToolTipMessage] = None
     ):
         super(QuickLineEditPassword, self).__init__(
             parent, object_name=object_name

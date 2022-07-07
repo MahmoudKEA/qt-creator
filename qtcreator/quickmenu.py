@@ -1,7 +1,4 @@
-from PyQt6.QtWidgets import *
-from PyQt6.QtGui import *
-from PyQt6.QtCore import *
-from typing import Union
+from .header import *
 from .widgetform import StandardForm
 from .quickwidget import QuickWidget
 
@@ -17,7 +14,7 @@ class QuickMenu(QMenu, StandardForm):
             attribute: Qt.WidgetAttribute = Qt.WidgetAttribute.WA_TranslucentBackground,
             position: QPoint = QPoint(11, 11),
             resizable: bool = False,
-            margin: Union[int, list] = 11,
+            margin: typing.Union[int, list] = 11,
             shadow: QGraphicsDropShadowEffect = None,
             focus_policy: Qt.FocusPolicy = Qt.FocusPolicy.ClickFocus,
             fixed_size: QSize = None,

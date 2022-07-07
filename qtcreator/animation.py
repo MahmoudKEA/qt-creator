@@ -1,6 +1,4 @@
-from PyQt6.QtWidgets import *
-from PyQt6.QtCore import *
-from typing import Any, Callable, Union
+from .header import *
 
 
 class Property:
@@ -12,8 +10,8 @@ class Property:
 
 class CustomizeMotion(QPropertyAnimation):
     def __init__(
-            self, parent, property_type: Union[bytes, QByteArray], duration: int,
-            start_value: Any = None, end_value: Any = None, finished: Callable = None
+            self, parent, property_type: typing.Union[bytes, QByteArray], duration: int,
+            start_value: typing.Any = None, end_value: typing.Any = None, finished: typing.Callable = None
     ):
         super(CustomizeMotion, self).__init__(parent, property_type)
 
@@ -30,7 +28,7 @@ class CustomizeMotion(QPropertyAnimation):
 
 
 class OpacityMotion(QPropertyAnimation):
-    def __init__(self, parent, property_type: Union[bytes, QByteArray] = None):
+    def __init__(self, parent, property_type: typing.Union[bytes, QByteArray] = None):
         if property_type is Property.OPACITY or not property_type and parent.parent():
             effect = QGraphicsOpacityEffect(parent)
             parent.setGraphicsEffect(effect)
@@ -39,7 +37,7 @@ class OpacityMotion(QPropertyAnimation):
         else:
             super(OpacityMotion, self).__init__(parent, Property.WINDOW_OPACITY)
 
-    def temp_show(self, duration: int = 300, finished: Callable = None) -> QPropertyAnimation:
+    def temp_show(self, duration: int = 300, finished: typing.Callable = None) -> QPropertyAnimation:
         self.setDuration(duration)
         self.setStartValue(0)
         self.setEndValue(1)
@@ -47,7 +45,7 @@ class OpacityMotion(QPropertyAnimation):
 
         return self
 
-    def temp_hide(self, duration: int = 500, finished: Callable = None) -> QPropertyAnimation:
+    def temp_hide(self, duration: int = 500, finished: typing.Callable = None) -> QPropertyAnimation:
         self.setDuration(duration)
         self.setStartValue(1)
         self.setEndValue(0)
@@ -55,7 +53,7 @@ class OpacityMotion(QPropertyAnimation):
 
         return self
 
-    def __finished(self, callback: Callable):
+    def __finished(self, callback: typing.Callable):
         try:
             self.targetObject().parent().setGraphicsEffect(None)
         except (AttributeError, RuntimeError):
@@ -72,7 +70,7 @@ class GeometryMotion(QPropertyAnimation):
 
     def temp_x(
             self, start_x: int = None, end_x: int = None,
-            duration: int = 500, finished: Callable = None
+            duration: int = 500, finished: typing.Callable = None
     ) -> QPropertyAnimation:
         rect = self.__parent.geometry()
         if not start_x:
@@ -89,7 +87,7 @@ class GeometryMotion(QPropertyAnimation):
 
     def temp_y(
             self, start_y: int = None, end_y: int = None,
-            duration: int = 500, finished: Callable = None
+            duration: int = 500, finished: typing.Callable = None
     ) -> QPropertyAnimation:
         rect = self.__parent.geometry()
         if not start_y:
@@ -105,7 +103,7 @@ class GeometryMotion(QPropertyAnimation):
         return self
 
     def temp_show(
-            self, width: int, duration: int = 500, finished: Callable = None
+            self, width: int, duration: int = 500, finished: typing.Callable = None
     ) -> QPropertyAnimation:
         rect = self.__parent.geometry()
 
@@ -118,7 +116,7 @@ class GeometryMotion(QPropertyAnimation):
 
         return self
 
-    def temp_hide(self, duration: int = 500, finished: Callable = None) -> QPropertyAnimation:
+    def temp_hide(self, duration: int = 500, finished: typing.Callable = None) -> QPropertyAnimation:
         rect = self.__parent.geometry()
 
         self.setDuration(duration)
@@ -137,7 +135,7 @@ class MaximumWidthMotion(QPropertyAnimation):
         self.__parent = parent
 
     def temp_show(
-            self, width: int, duration: int = 1000, finished: Callable = None
+            self, width: int, duration: int = 1000, finished: typing.Callable = None
     ) -> QPropertyAnimation:
         self.setDuration(duration)
         self.setStartValue(0)
@@ -148,7 +146,7 @@ class MaximumWidthMotion(QPropertyAnimation):
 
         return self
 
-    def temp_hide(self, duration: int = 500, finished: Callable = None) -> QPropertyAnimation:
+    def temp_hide(self, duration: int = 500, finished: typing.Callable = None) -> QPropertyAnimation:
         self.setDuration(duration)
         self.setStartValue(self.__parent.width())
         self.setEndValue(0)

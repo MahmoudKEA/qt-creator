@@ -1,7 +1,4 @@
-from PyQt6.QtWidgets import *
-from PyQt6.QtGui import *
-from PyQt6.QtCore import *
-from typing import Any, Callable, Union
+from .header import *
 from .quickwidget import QuickWidget
 from .quicktooltip import QuickToolTip, QuickToolTipMessage
 from .quickprogressbar import QuickProgressBar
@@ -46,19 +43,19 @@ class QuickStrengthBar(QuickWidget):
             self, parent=None,
             text_visible: bool = True,
             text_align: Qt.AlignmentFlag = None,
-            margin: Union[int, list] = 0,
+            margin: typing.Union[int, list] = 0,
             spacing: int = 6,
             font_size: int = None,
             fixed_size: QSize = None,
             fixed_width: int = None,
             fixed_height: int = None,
             object_name: str = None,
-            animation_value_changed: Callable = None,
-            animation_start_value: Any = None,
-            animation_end_value: Any = None,
+            animation_value_changed: typing.Callable = None,
+            animation_start_value: typing.Any = None,
+            animation_end_value: typing.Any = None,
             animation_duration: int = 300,
             animation_duration_bar: int = 300,
-            tooltip: Union[QuickToolTip, QuickToolTipMessage] = None
+            tooltip: typing.Union[QuickToolTip, QuickToolTipMessage] = None
     ):
         super(QuickStrengthBar, self).__init__(
             parent, object_name=object_name

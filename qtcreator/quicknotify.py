@@ -1,7 +1,4 @@
-from PyQt6.QtWidgets import *
-from PyQt6.QtGui import *
-from PyQt6.QtCore import *
-from typing import Any, Callable, Union
+from .header import *
 from .quickwidget import QuickWidget
 from .quicklabel import QuickLabel
 from .quickpushbutton import QuickPushButton
@@ -15,9 +12,9 @@ class QuickNotifyListWidgetItem(QuickWidget):
             fixed_height: int = None,
             object_name: str = None,
             graphic_effect: QGraphicsEffect = None,
-            animation_value_changed: Callable = None,
-            animation_start_value: Any = None,
-            animation_end_value: Any = None,
+            animation_value_changed: typing.Callable = None,
+            animation_start_value: typing.Any = None,
+            animation_end_value: typing.Any = None,
             animation_duration: int = 300
     ):
         super(QuickNotifyListWidgetItem, self).__init__(
@@ -45,16 +42,16 @@ class QuickNotifyMessageListWidgetItem(QuickNotifyListWidgetItem):
             close_icon: QIcon = None,
             close_icon_size: QSize = QSize(16, 16),
             close_size: QSize = QSize(21, 21),
-            margin: Union[int, list] = 11,
+            margin: typing.Union[int, list] = 11,
             graphic_effect: QGraphicsEffect = None,
             font_size: int = None,
             fixed_size: QSize = None,
             fixed_width: int = None,
             fixed_height: int = None,
             object_name: str = None,
-            animation_value_changed: Callable = None,
-            animation_start_value: Any = None,
-            animation_end_value: Any = None,
+            animation_value_changed: typing.Callable = None,
+            animation_start_value: typing.Any = None,
+            animation_end_value: typing.Any = None,
             animation_duration: int = 300
     ):
         super(QuickNotifyMessageListWidgetItem, self).__init__(
@@ -103,7 +100,7 @@ class QuickNotifyListWidget(QuickWidget):
             mode: int = Mode.INTERNAL,
             max_visible: int = 5,
             timeout: int = 5000,
-            margin: Union[int, list] = 11,
+            margin: typing.Union[int, list] = 11,
             spacing: int = 11,
             object_name: str = None
     ):
