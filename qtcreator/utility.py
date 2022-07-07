@@ -39,8 +39,8 @@ def update_polish(target):
     target.style().polish(target)
 
 
-def translator(text: str):
-    QApplication.translate('Form', text)
+def translator(text: str, name: str = 'Form') -> str:
+    return QApplication.translate('Form', text)
 
 
 def clipboard(text: str):
