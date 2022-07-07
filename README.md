@@ -55,4 +55,6 @@ class Application(qtcreator.QuickMainWidget):
 ### Go to the test folder to check full application built by QtCreator
     python test/qtcreator_unittesting.py
 
-<a href="https://ibb.co/HXbM0Hj"><img src="https://i.ibb.co/V3zhdqs/2022-07-07-225608.png" alt="2022-07-07-225608" border="0"></a><br /><a target='_blank' href='https://imgbb.com/'>upload image</a><br />
+<a href="https://ibb.co/HXbM0Hj">
+    <img src="https://i.ibb.co/V3zhdqs/2022-07-07-225608.png" alt="2022-07-07-225608" border="0">
+</a>
