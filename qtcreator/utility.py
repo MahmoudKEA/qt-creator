@@ -40,7 +40,7 @@ def update_polish(target):
 
 
 def translator(text: str, name: str = 'Form') -> str:
-    return QApplication.translate('Form', text)
+    return QApplication.translate(name, text)
 
 
 def clipboard(text: str):
