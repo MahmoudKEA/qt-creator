@@ -1,4 +1,4 @@
-from qtcreator import *
+from QtCreator import *
 
 
 class SettingsDialog(QuickDialog):

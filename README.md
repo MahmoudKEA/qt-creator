@@ -10,39 +10,39 @@
 
 ## Usage
 ```python
-import qtcreator
+import QtCreator
 
 
 # Create main widget
-class Application(qtcreator.QuickMainWidget):
+class Application(QtCreator.QuickMainWidget):
     def __init__(self, parent):
         super(Application, self).__init__(
             parent=parent,
-            flags=qtcreator.Qt.WindowType.SubWindow,
-            attribute=qtcreator.Qt.WidgetAttribute.WA_StyledBackground,
+            flags=QtCreator.Qt.WindowType.SubWindow,
+            attribute=QtCreator.Qt.WidgetAttribute.WA_StyledBackground,
             resizable=True,
             object_name="mainWidget"
         )
 
         # Create layout
-        layout = qtcreator.QHBoxLayout()
+        layout = QtCreator.QHBoxLayout()
         self.mainWidget.setLayout(layout)
         self.resize(300, 450)
 
         # Create lineEdit object
-        self.lineEdit = qtcreator.QuickLineEdit(
+        self.lineEdit = QtCreator.QuickLineEdit(
             parent=self,
             placeholder_text="Username",
             clearable=True,
             add_icon=True,
-            icon=qtcreator.QPixmap('userIcon.png'),
+            icon=QtCreator.QPixmap('userIcon.png'),
             fixed_height=41,
             object_name="lineEdit"
         )
         layout.addWidget(self.lineEdit)
 
         # Create pushButton object
-        self.pushButton = qtcreator.QuickPushButton(
+        self.pushButton = QtCreator.QuickPushButton(
             parent=self,
             text="Login",
             font_size=14,
